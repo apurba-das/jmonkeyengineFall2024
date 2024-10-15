@@ -66,8 +66,6 @@ import java.util.logging.Level;
  * @author Kirill Vainer, normenhansen
  */
 public class JmeDesktopSystem extends JmeSystemDelegate {
-	
-	private static final String CONTEXT_CREATION_FAILURE = "Failed to create context";
 
     public JmeDesktopSystem() {
     }
@@ -151,7 +149,7 @@ public class JmeDesktopSystem extends JmeSystemDelegate {
         } catch (InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
                 | NoSuchMethodException | SecurityException ex) {
-            logger.log(Level.SEVERE, CONTEXT_CREATION_FAILURE, ex);
+            logger.log(Level.SEVERE, "Failed to create context", ex);
         } catch (ClassNotFoundException ex) {
             logger.log(Level.SEVERE, "CRITICAL ERROR: Context class is missing!\n"
                     + "Make sure jme3_lwjgl-ogl is on the classpath.", ex);
@@ -182,7 +180,7 @@ public class JmeDesktopSystem extends JmeSystemDelegate {
         } catch (InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
                 | NoSuchMethodException | SecurityException ex) {
-            logger.log(Level.SEVERE, CONTEXT_CREATION_FAILURE, ex);
+            logger.log(Level.SEVERE, "Failed to create context", ex);
         } catch (ClassNotFoundException ex) {
             logger.log(Level.SEVERE, "CRITICAL ERROR: Context class is missing!\n"
                     + "Make sure jme3-jogl is on the classpath.", ex);
@@ -201,7 +199,7 @@ public class JmeDesktopSystem extends JmeSystemDelegate {
         } catch (InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
                 | NoSuchMethodException | SecurityException ex) {
-            logger.log(Level.SEVERE, CONTEXT_CREATION_FAILURE, ex);
+            logger.log(Level.SEVERE, "Failed to create context", ex);
         } catch (ClassNotFoundException ex) {
             logger.log(Level.SEVERE, "CRITICAL ERROR: Context class is missing!", ex);
         }
@@ -246,7 +244,7 @@ public class JmeDesktopSystem extends JmeSystemDelegate {
         } catch (InstantiationException | IllegalAccessException
                 | IllegalArgumentException | InvocationTargetException
                 | NoSuchMethodException | SecurityException ex) {
-            logger.log(Level.SEVERE, CONTEXT_CREATION_FAILURE, ex);
+            logger.log(Level.SEVERE, "Failed to create context", ex);
         }
 
         return null;
